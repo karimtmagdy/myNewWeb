@@ -11,22 +11,21 @@ body.dark #services .serv-box {
   background: var(--clr-shape-dark);
 }
 :root {
-  --clr-shadow: #b9b9b9;
-  --clr-primary: #3c3c3e;
-  --clr-success: #0d6efd;
-  --clr-septenary: #fca311;
   --transition: 0.3s;
   --padding: 100px;
+  --clr-shadow: #b9b9b9;
+  --clr-success: #0d6efd;
+  --clr-septenary: #fca311;
   --clr-main: #1f1f1f;
   --clr-light: #ffffff;
   --clr-dark: #0c0b0b;
-  /* --clr-shape-light: #f5f5f5; */
   --clr-shape-light: #e9e6e6;
   --clr-shape-dark: #020202;
-  --clr-nonary: #003399;
+  --clr-primary: #003399;
   --clr-senary: #ffc107;
   --clr-secondary: #5800ff;
   --clr-denary: #ffcc00;
+  --clr-red: #e00a0a;
 }
 section {
   padding-top: var(--padding);
@@ -94,13 +93,12 @@ body.dark {
 }
 #toggleSwitch {
   width: 50px;
-  height: 30px;
+  height: 28px;
   background: var(--clr-dark);
   border-radius: 50px;
   position: relative;
   box-shadow: 0 0 2px var(--clr-shape-light);
   cursor: pointer;
-  transition: var(--transition);
 }
 #toggleSwitch.dark {
   background: var(--clr-shape-light);
@@ -112,32 +110,65 @@ body.dark {
   transform: translateY(-50%);
   width: 25px;
   height: 25px;
-  background: var(--clr-secondary);
+  background: var(--clr-red);
   border-radius: 50%;
   transition: var(--transition);
 }
 #circle.dark {
   left: calc(100% - 26px);
-  background: var(--clr-senary);
+  background: var(--clr-septenary);
 }
 ul {
   text-transform: uppercase;
 }
 /* ================= End Global Root ================= */
 /* ================= Start Loding ================= */
-
-.loding::before {
+.load {
+  background: var(--clr-shape-dark);
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  place-items: center;
+}
+.loading {
+  font-size: 3rem;
+  font-weight: bold;
+  position: relative;
+  background-image: linear-gradient(
+    90deg,
+    var(--clr-primary),
+    var(--clr-red),
+    var(--clr-septenary),
+    var(--clr-red),
+    var(--clr-success)
+  );
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: load 8s linear 1;
+  background-size: 500%;
+}
+@keyframes load {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.loading::before {
   content: "";
   position: absolute;
-  top: 56%;
-  left: 39%;
+  top: 100%;
+  left: 0;
   height: 1px;
   border-radius: 20px;
-  background: linear-gradient(to right, blue, red, yellow);
+  transform: translateY(-50%);
+  background: linear-gradient(to right, var(--clr-primary), var(--clr-red));
   z-index: 1;
-  animation: loding 8s linear infinite;
+  animation: loading 8s linear 1;
 }
-@keyframes loding {
+@keyframes loading {
   0% {
     width: 0;
   }
@@ -157,10 +188,35 @@ body.dark header {
 }
 #logo {
   font-size: 2rem;
-}
-#logo,
-#toggleMenu {
   cursor: pointer;
+}
+#toggleMenu {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: flex-end;
+  cursor: pointer;
+}
+#toggleMenu span {
+  width: 100%;
+  height: 3px;
+  border-radius: 20px;
+  background: white;
+  transition: var(--transition);
+}
+#toggleMenu.active span:first-child {
+  width: 70%;
+  background: var(--clr-red);
+}
+#toggleMenu.active span:nth-child(2) {
+  width: 50%;
+  background: var(--clr-primary);
+}
+#toggleMenu.active span:last-child {
+  width: 30%;
+  background: var(--clr-septenary);
 }
 /* ================= Start Description ================= */
 @media (max-width: 767px) {
@@ -272,7 +328,7 @@ body.dark header {
 }
 #work .container .box-work .info a:hover,
 #work .container .box-work .info a:focus {
-  color: var(--clr-nonary);
+  color: var(--clr-primary);
 }
 /* ================= Start Contact ================= */
 #contact .container {
@@ -307,7 +363,7 @@ footer {
   padding: 8px 6px;
   border-radius: 6px;
   border: none;
-  background: var(--clr-senary);
+  background: var(--clr-septenary);
   font-weight: bold;
   transition: var(--transition);
 }
@@ -315,16 +371,3 @@ footer {
   background: #ffca2c;
 }
 /* ================= End Page ================= */
-.loding {
-  background-color: #222;
-  display: grid;
-  width: 100%;
-  height: 100vh;
-  font-size: 3rem;
-  font-weight: bold;
-  place-items: center;
-  position: relative;
-  color: #fff;
-  animation: lodings 8s linear infinite;
-}
-
