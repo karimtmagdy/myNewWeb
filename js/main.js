@@ -20,6 +20,12 @@ window.onscroll = function () {
     });
   }
 };
+//! |> Start Toggle Menu
+const toggleMenu = document.getElementById("toggleMenu")
+
+toggleMenu.onclick = function(){
+  toggleMenu.classList.toggle("active")
+}
 //! |> Toggle Scroll Top
 const scrollTop = document.getElementById("scrollTop");
 (window.onscroll = function () {
