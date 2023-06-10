@@ -43,13 +43,12 @@ p {
   line-height: 1.8em;
   font-size: 1.1em;
 }
+/* Components*/
 .mainHeading {
   font-size: 5rem;
   text-transform: uppercase;
-  /* font-family: "Anton", sans-serif; */
   font-family: "Bruno Ace SC", cursive;
 }
-
 @media screen and (max-width: 575px) {
   .mainHeading {
     font-size: 1.5rem;
@@ -60,7 +59,6 @@ p {
     font-size: 2.5rem;
   }
 }
-/* Components*/
 #title .desc {
   font-size: 5rem;
   font-weight: 900;
@@ -126,6 +124,28 @@ ul {
   text-transform: uppercase;
 }
 /* ================= End Global Root ================= */
+/* ================= Start Loding ================= */
+
+.loding::before {
+  content: "";
+  position: absolute;
+  top: 56%;
+  left: 39%;
+  height: 1px;
+  border-radius: 20px;
+  background: linear-gradient(to right, blue, red, yellow);
+  z-index: 1;
+  animation: loding 8s linear infinite;
+}
+@keyframes loding {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 150px;
+  }
+}
+/* ================= Start Header ================= */
 header {
   height: 50px;
   background: var(--clr-shape-dark);
@@ -287,7 +307,7 @@ footer {
   padding: 8px 6px;
   border-radius: 6px;
   border: none;
-  background-color: var(--clr-senary);
+  background: var(--clr-senary);
   font-weight: bold;
   transition: var(--transition);
 }
@@ -295,7 +315,6 @@ footer {
   background: #ffca2c;
 }
 /* ================= End Page ================= */
-
 .loding {
   background-color: #222;
   display: grid;
@@ -306,37 +325,6 @@ footer {
   place-items: center;
   position: relative;
   color: #fff;
-  /* top: 0; */
-  /* left: 0; */
-  /* position: absolute; */
-  /* transition: 3s; */
+  animation: lodings 8s linear infinite;
 }
-.loding:hover {
-  /* transform: translateY(-100vh); */
-}
-.loding::before {
-  content: "";
-  position: absolute;
-  top: 57%;
-  /* left: 49%; */
-  left: 50%;
-  transform: translate(-50%, -60%);
-  /* width: 0; */
-  height: 20px;
-  border-radius: 20px;
-  background: linear-gradient(to left, blue, red);
-  transition: 3s;
-  z-index: 1;
-  /* animation: loding 4s linear infinite; */
-  height: 3px;
-  width: 200px;
-}
-@keyframes loding {
-  0% {
-    /* left: 49%; */
-  }
-  100% {
-    width: 200px;
-    /* left: 51%; */
-  }
-}
+
