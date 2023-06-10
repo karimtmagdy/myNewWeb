@@ -1,0 +1,342 @@
+/* ================= Start Global Root ================= */
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Bruno+Ace+SC&family=Open+Sans:wght@400;700&family=Oswald:wght@700&family=Poppins:wght@200;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body.dark #work .box-work,
+body.dark #skills .skill,
+body.dark #services .serv-box {
+  background: var(--clr-shape-dark);
+}
+:root {
+  --clr-shadow: #b9b9b9;
+  --clr-primary: #3c3c3e;
+  --clr-success: #0d6efd;
+  --clr-septenary: #fca311;
+  --transition: 0.3s;
+  --padding: 100px;
+  --clr-main: #1f1f1f;
+  --clr-light: #ffffff;
+  --clr-dark: #0c0b0b;
+  /* --clr-shape-light: #f5f5f5; */
+  --clr-shape-light: #e9e6e6;
+  --clr-shape-dark: #020202;
+  --clr-nonary: #003399;
+  --clr-senary: #ffc107;
+  --clr-secondary: #5800ff;
+  --clr-denary: #ffcc00;
+}
+section {
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.8em;
+  font-size: 1.1em;
+}
+.mainHeading {
+  font-size: 5rem;
+  text-transform: uppercase;
+  /* font-family: "Anton", sans-serif; */
+  font-family: "Bruno Ace SC", cursive;
+}
+
+@media screen and (max-width: 575px) {
+  .mainHeading {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .mainHeading {
+    font-size: 2.5rem;
+  }
+}
+/* Components*/
+#title .desc {
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: "Anton", sans-serif;
+}
+body.dark #title .desc {
+  color: var(--clr-light);
+}
+@media (max-width: 575px) {
+  #title .desc {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 767px) {
+  #title .desc {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #title .desc {
+    font-size: 3rem;
+  }
+}
+/* Components*/
+body {
+  font-family: "Open Sans", sans-serif, "Poppins", "Oswald", "Bebas Neue",
+    "Anton", "Bruno Ace SC", cursive;
+  background: var(--clr-light);
+}
+body.dark {
+  background: var(--clr-dark);
+}
+#toggleSwitch {
+  width: 50px;
+  height: 30px;
+  background: var(--clr-dark);
+  border-radius: 50px;
+  position: relative;
+  box-shadow: 0 0 2px var(--clr-shape-light);
+  cursor: pointer;
+  transition: var(--transition);
+}
+#toggleSwitch.dark {
+  background: var(--clr-shape-light);
+}
+#circle {
+  position: absolute;
+  top: 50%;
+  left: 1px;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  background: var(--clr-secondary);
+  border-radius: 50%;
+  transition: var(--transition);
+}
+#circle.dark {
+  left: calc(100% - 26px);
+  background: var(--clr-senary);
+}
+ul {
+  text-transform: uppercase;
+}
+/* ================= End Global Root ================= */
+header {
+  height: 50px;
+  background: var(--clr-shape-dark);
+  color: var(--clr-light);
+  font-family: "Bruno Ace SC", cursive;
+}
+body.dark header {
+  background: var(--clr-main);
+}
+#logo {
+  font-size: 2rem;
+}
+#logo,
+#toggleMenu {
+  cursor: pointer;
+}
+/* ================= Start Description ================= */
+@media (max-width: 767px) {
+  #title :is(h1, p) {
+    text-align: center;
+  }
+}
+#title .social {
+  margin-top: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  width: fit-content;
+  transition: var(--transition);
+  gap: 20px;
+  color: var(--clr-main);
+}
+#title .social #facebook:hover {
+  color: #1877f2;
+}
+#title .social #github:hover {
+  color: #333333;
+}
+#title .social #linkedin:hover {
+  color: #0a66c2;
+}
+#title .social #behance:hover {
+  color: #1769ff;
+}
+#title .social #twitter:hover {
+  color: #1da1f2;
+}
+/* ================= Start Services ================= */
+#services .container {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+#services .serv-box {
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+  min-height: 230px;
+  /* background: var(--clr-shape-light); */
+  box-shadow: 0 0 4px var(--clr-shadow);
+  transition: var(--transition);
+}
+#services i {
+  font-size: 2rem;
+}
+#services .serv-box h4 {
+  margin: 20px 0;
+  font-family: "Bruno Ace SC";
+}
+/* ================= Start Skills ================= */
+#skills .container {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+#skills .skill {
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  /* background: var(--clr-shape-light); */
+  box-shadow: 0 0 4px var(--clr-shadow);
+  transition: var(--main-transition);
+}
+#skills .skill img {
+  max-width: 100px;
+  max-height: 100px;
+}
+#skills .skill h6 {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Bruno Ace SC", cursive;
+}
+#skills .skill .progress {
+  pointer-events: none;
+  /* background: var(--clr-primary); */
+}
+#skills .skill .progress span {
+  background: var(--clr-septenary);
+  transition: width 1s linear;
+  height: 100%;
+}
+/* ================= Start Skills ================= */
+#work .container {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+#work .box-work {
+  /* background: var(--clr-shape-light); */
+  box-shadow: 0 0 4px var(--clr-shadow);
+  padding: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  counter-increment: my-counter;
+}
+#work h4::after {
+  content: " 0" counter(my-counter);
+}
+#work a img {
+  width: 100%;
+  border-radius: 10px;
+  min-height: 200px;
+  max-height: 200px;
+}
+#work .info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+#work .container .box-work .info a:hover,
+#work .container .box-work .info a:focus {
+  color: var(--clr-nonary);
+}
+/* ================= Start Contact ================= */
+#contact .container {
+  grid-template-columns: 1fr;
+}
+#contact .container .box-contact input,
+textarea {
+  border: 1px solid;
+  outline: none;
+  padding: 15px;
+  border-radius: 10px;
+}
+#contact .container .box-contact textarea {
+  min-height: 200px;
+  resize: none;
+}
+/* .contact .box-contact button {
+  margin-right: auto;
+} */
+/* ================= Start Footer ================= */
+footer {
+  font-family: "Bruno Ace SC", cursive;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #444;
+}
+/* ================= Start ScrollToTop ================= */
+#scrollTop {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  padding: 8px 6px;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--clr-senary);
+  font-weight: bold;
+  transition: var(--transition);
+}
+#scrollTop:hover {
+  background: #ffca2c;
+}
+/* ================= End Page ================= */
+
+.loding {
+  background-color: #222;
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  font-size: 3rem;
+  font-weight: bold;
+  place-items: center;
+  position: relative;
+  color: #fff;
+  /* top: 0; */
+  /* left: 0; */
+  /* position: absolute; */
+  /* transition: 3s; */
+}
+.loding:hover {
+  /* transform: translateY(-100vh); */
+}
+.loding::before {
+  content: "";
+  position: absolute;
+  top: 57%;
+  /* left: 49%; */
+  left: 50%;
+  transform: translate(-50%, -60%);
+  /* width: 0; */
+  height: 20px;
+  border-radius: 20px;
+  background: linear-gradient(to left, blue, red);
+  transition: 3s;
+  z-index: 1;
+  /* animation: loding 4s linear infinite; */
+  height: 3px;
+  width: 200px;
+}
+@keyframes loding {
+  0% {
+    /* left: 49%; */
+  }
+  100% {
+    width: 200px;
+    /* left: 51%; */
+  }
+}
