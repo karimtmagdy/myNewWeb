@@ -34,19 +34,25 @@
   </head>
   <body>
       <!-- ===================== Loding ===================== -->
-      <div class="loding">loding</div>
+      <div class="load">
+        <div class="loading">loding</div>
+      </div>
       <!-- ===================== Header ===================== -->
       <header class="d-flex align-items-center justify-content-between px-2">
           <div id="logo" class="fw-bold text-uppercase ">karim</div>
           <!-- ===================== Navigation ===================== -->
       <nav class="d-flex align-items-center justify-content-between position-relative">
-        <i class="fa-solid fa-bars fw-bold fs-3 d-lg-none" id="toggleMenu"></i>
+        <div class="d-lg-none" id="toggleMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <ul class="nav p-0 m-0 gap-2 d-none d-lg-flex">
           <li class="nav-item"><a href="#" class="nav-link"></a></li>
           <li class="nav-item"><a href="#about" class="nav-link">about</a></li>
           <li class="nav-item"><a href="#services" class="nav-link">services</a></li>
           <li class="nav-item"><a href="#skills" class="nav-link">skills</a></li>
-          <li class="nav-item"><a href="#Work" class="nav-link">Work</a></li>
+          <li class="nav-item"><a href="#work" class="nav-link">Work</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link">contact</a></li>
         </ul>
       </nav>
@@ -57,7 +63,7 @@
       <!-- ===================== Title ===================== -->
       <section class="d-flex align-items-center" id="title">
         <main class="container">
-          <h1 class="desc">Karim Tarek <br />Front-End Developer</h1>
+          <h1 class="desc">Karim Tarek <br />Full - Stack <br />Developer</h1>
           <p>A Professional And Creative Web Programmer At Work<br />My Goal is To Presentthe Client's Idea In The Simplest And Most Beautiful Way Possible</p>
           <button id="btnTitle" class="btn btn-warning" onclick="myFunction()">My Phone</button>
             <ul class="social d-flex">
@@ -68,7 +74,6 @@
               <a href="#" class="nav-link" id="twitter"><i class="fa-brands fa-twitter"></i></a>
             </ul>
         </main>
-
       </section>
       <!-- ===================== About ===================== -->
       <section class="about" id="about">
