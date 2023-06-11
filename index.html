@@ -34,28 +34,30 @@
   </head>
   <body>
       <!-- ===================== Loding ===================== -->
-      <div class="load">
+      <!-- <div class="load">
         <div class="loading">loding</div>
-      </div>
+      </div> -->
       <!-- ===================== Header ===================== -->
-      <header class="d-flex align-items-center justify-content-between px-2">
-          <div id="logo" class="fw-bold text-uppercase ">karim</div>
-          <!-- ===================== Navigation ===================== -->
-      <nav class="d-flex align-items-center justify-content-between position-relative">
-        <div class="d-lg-none" id="toggleMenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <ul class="nav p-0 m-0 gap-2 d-none d-lg-flex">
-          <li class="nav-item"><a href="#" class="nav-link"></a></li>
-          <li class="nav-item"><a href="#about" class="nav-link">about</a></li>
-          <li class="nav-item"><a href="#services" class="nav-link">services</a></li>
-          <li class="nav-item"><a href="#skills" class="nav-link">skills</a></li>
-          <li class="nav-item"><a href="#work" class="nav-link">Work</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link">contact</a></li>
-        </ul>
-      </nav>
+      <header class="d-flex align-items-center px-2">
+        <div class="d-flex align-items-center justify-content-between w-100 me-2">
+            <div id="logo" class="fw-bold text-uppercase">karim</div>
+        <!-- ===================== Navigation ===================== -->
+        <nav class="d-flex align-items-center justify-content-between">
+          <div class="d-md-none" id="toggleMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul id="menu" class="nav p-0 m-0 gap-2 d-none d-lg-flex">
+            <li class="nav-item"><a class="nav-link"></a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">about</a></li>
+            <li class="nav-item"><a href="#services" class="nav-link">services</a></li>
+            <li class="nav-item"><a href="#skills" class="nav-link">skills</a></li>
+            <li class="nav-item"><a href="#work" class="nav-link">Work</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">contact</a></li>
+          </ul>
+        </nav>
+      </div>
       <div id="toggleSwitch" class="position-relative">
         <div id="circle"></div>
       </div>
@@ -65,8 +67,8 @@
         <main class="container">
           <h1 class="desc">Karim Tarek <br />Full - Stack <br />Developer</h1>
           <p>A Professional And Creative Web Programmer At Work<br />My Goal is To Presentthe Client's Idea In The Simplest And Most Beautiful Way Possible</p>
-          <button id="btnTitle" class="btn btn-warning" onclick="myFunction()">My Phone</button>
-            <ul class="social d-flex">
+          <button id="btnTitle" class="btn btn-outline-warning" onclick="myFunction()"><a href="#" class="text-black">Download CV</a></button>
+          <ul class="social d-flex">
               <a href="#" class="nav-link" id="facebook"><i class="fa-brands fa-facebook"></i></a>
               <a href="#" class="nav-link" id="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
               <a href="#" class="nav-link" id="github"><i class="fa-brands fa-github"></i></a>
@@ -76,7 +78,7 @@
         </main>
       </section>
       <!-- ===================== About ===================== -->
-      <section class="about" id="about">
+      <section id="about">
         <h1 class="mainHeading container-fluid">About</h1>
         <main class="container">
           <p>
@@ -289,10 +291,8 @@
       <footer>
         <span>Copyright <span>&copy;</span> all rights reserved</span>
       </footer>
-
       <!-- ===================== Scroll To Top ===================== -->
       <button id="scrollTop" class="rounded rounded-3 border-0">up</button>
-      <!-- ===================== End Prject ===================== -->
     <!-- ===================== JavaScript ===================== -->
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
