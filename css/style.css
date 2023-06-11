@@ -64,9 +64,6 @@ p {
   text-transform: uppercase;
   font-family: "Anton", sans-serif;
 }
-body.dark #title .desc {
-  color: var(--clr-light);
-}
 @media (max-width: 575px) {
   #title .desc {
     font-size: 1.5rem;
@@ -90,6 +87,7 @@ body {
 }
 body.dark {
   background: var(--clr-dark);
+  color: var(--clr-light);
 }
 #toggleSwitch {
   width: 50px;
@@ -116,7 +114,7 @@ body.dark {
 }
 #circle.dark {
   left: calc(100% - 26px);
-  background: var(--clr-septenary);
+  background: var(--clr-senary);
 }
 ul {
   text-transform: uppercase;
@@ -182,6 +180,7 @@ header {
   background: var(--clr-shape-dark);
   color: var(--clr-light);
   font-family: "Bruno Ace SC", cursive;
+  transition: var(--transition);
 }
 body.dark header {
   background: var(--clr-main);
@@ -217,6 +216,25 @@ body.dark header {
 #toggleMenu.active span:last-child {
   width: 30%;
   background: var(--clr-septenary);
+}
+@media (max-width: 767px) {
+  header nav #menu {
+    position: fixed;
+    left: -40%;
+    top: 0;
+    display: flex !important;
+    width: 40%;
+    height: 100vh;
+    background: var(--clr-shape-dark);
+    flex-direction: column;
+    transition: var(--transition);
+  }
+  header nav #menu.active {
+    left: 0;
+  }
+  body.dark header nav #menu{
+    background: var(--clr-main);
+  }
 }
 /* ================= Start Description ================= */
 @media (max-width: 767px) {
@@ -258,7 +276,6 @@ body.dark header {
   text-align: center;
   border-radius: 20px;
   min-height: 230px;
-  /* background: var(--clr-shape-light); */
   box-shadow: 0 0 4px var(--clr-shadow);
   transition: var(--transition);
 }
@@ -277,7 +294,6 @@ body.dark header {
   padding: 10px;
   border-radius: 20px;
   text-align: center;
-  /* background: var(--clr-shape-light); */
   box-shadow: 0 0 4px var(--clr-shadow);
   transition: var(--main-transition);
 }
@@ -293,7 +309,7 @@ body.dark header {
 }
 #skills .skill .progress {
   pointer-events: none;
-  /* background: var(--clr-primary); */
+  color: var(--clr-dark);
 }
 #skills .skill .progress span {
   background: var(--clr-septenary);
@@ -305,7 +321,6 @@ body.dark header {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 #work .box-work {
-  /* background: var(--clr-shape-light); */
   box-shadow: 0 0 4px var(--clr-shadow);
   padding: 10px;
   border-radius: 20px;
@@ -345,9 +360,6 @@ textarea {
   min-height: 200px;
   resize: none;
 }
-/* .contact .box-contact button {
-  margin-right: auto;
-} */
 /* ================= Start Footer ================= */
 footer {
   font-family: "Bruno Ace SC", cursive;
@@ -363,11 +375,17 @@ footer {
   padding: 8px 6px;
   border-radius: 6px;
   border: none;
-  background: var(--clr-septenary);
+  background: var(--clr-senary);
   font-weight: bold;
   transition: var(--transition);
 }
 #scrollTop:hover {
   background: #ffca2c;
+}
+@media (max-width: 767px){
+  #scrollTop{
+    bottom: 50px;
+    right: 20px;
+  }
 }
 /* ================= End Page ================= */
